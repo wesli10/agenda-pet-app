@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, viewport-fit=cover"
+    />
+    <title>Agenda Pet</title>
+
+    <!-- PWA: instalável na tela de início (iPhone: Compartilhar > Adicionar à Tela de Início) -->
+    <link rel="manifest" href="/agenda-pet-app/manifest.json" />
+    <link rel="icon" type="image/png" href="/agenda-pet-app/favicon.png" />
+    <link rel="apple-touch-icon" href="/agenda-pet-app/icon-180.png" />
+    <meta name="theme-color" content="#4F46E5" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Agenda Pet" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <style id="expo-reset">
+      html,
+      body {
+        height: 100%;
+        background: #F8FAFC;
+        overscroll-behavior: none;
+      }
+      body {
+        overflow: hidden;
+      }
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <noscript>Você precisa habilitar o JavaScript para usar o Agenda Pet.</noscript>
+    <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/agenda-pet-app/sw.js').catch(function () {});
+        });
+      }
+    </script>
+  <script src="/agenda-pet-app/_expo/static/js/web/entry-4773301e3b5a3a29147a61ea1d2db832.js" defer></script>
+</body>
+</html>
