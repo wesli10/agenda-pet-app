@@ -1,7 +1,7 @@
 // Service worker — app instalável e disponível offline.
 // Navegação: network-first (pega versão nova quando há internet, senão usa o cache).
 // Arquivos com hash (/_expo/...) e ícones: cache-first.
-const CACHE = 'agenda-pet-v5';
+const CACHE = 'agenda-pet-v6';
 // Funciona na raiz do domínio ou num subcaminho (GitHub Pages): a base vem de onde o sw.js está.
 const BASE = new URL('./', self.location).pathname;
 const SHELL = [BASE, BASE + 'manifest.json', BASE + 'icon-180.png', BASE + 'icon-192.png', BASE + 'icon-512.png', BASE + 'favicon.png'];
